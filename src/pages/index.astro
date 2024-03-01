@@ -1,0 +1,91 @@
+---
+import DefaultLayoutHero from '../layouts/DefaultLayoutHero.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<DefaultLayoutHero title="Home">
+  <div class="container">
+  <Hero />
+  <section class="my-64">
+    <ContentMedia imgSrc="/Content1.jpg" reverseImg={true}>
+      <h4 class="ml-1">Authentic</h4>
+      <h2 class="text-gradient">Direct From Korea<br>Genuine Merchandise</h2>
+      <p class="text-2xl">
+        We pride ourselves in offering the latest albums, light sticks and photocards shipped directly from Korea. Our merch is 100% authentic ensuring that you get the latest quality products at affordable prices.
+      </p>
+      <div class="flex gap-4">
+        <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <Icon name="ion:star-outline" />
+          Learn More
+        </a>
+        <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <Icon name="ion:star-outline" />
+          Sign Up Now
+        </a>
+      </div>
+    </ContentMedia>
+  </section>
+  <section class="my-64">
+    <div class="container">
+      <h2 class="text-center">
+      Membership Benefits  
+      </h2>
+      <h4 class="text-center p-10">
+      Become a member of K-Pop Nation East Bay and get exclusive benefits with our store. Members can get free albums, photocards, lightsticks, and access to Merch!
+      </h4>
+    </div>
+    <div class="flex flex-row feature gap-4 container">
+      <Feature title="Reserve">
+        Members can call our store and place a reservation on albums or lightsticks for 24 hours.
+      </Feature>
+      <Feature title="Refunds">
+        Become a member and we will allow up to 14-day refunds for unopened items.
+      </Feature>
+      <Feature title="Rank to 만렙">
+        Members can earn points with every purchase that will give them additional benefits such as free photocards, albums, PCs for friends, and discounts.
+      </Feature>
+    </div>
+  </section>
+
+  <section class="my-64">
+    <ContentMedia imgSrc="/Content2.jpg" reverseImg={true}>
+      <h4 class="ml-1">Join Now</h4>
+      <h2 class="text-gradient">Unlock Exclusive<br>Membership Perks Today</h2>
+      <p class="text-2xl">
+        Join our membership program today and enjoy exclusive benefits, discounts, and more.
+      </p>
+      <div class="flex gap-4">
+        <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <Icon name="ion:star-outline" />
+          Join
+        </a>
+        <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <Icon name="ion:star-outline" />
+          Learn More
+        </a>
+      </div>
+    </ContentMedia>
+  </section>
+  
+  <section class="mb-32 mt-64">
+      <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+        <div class="p-4">
+          <h2>Get in Touch</h2>
+          <h4>We're here to answer any questions</h4>
+        </div>
+        <div class="flex flex-col justify-center ml-20">
+          <span>E-mail</span>
+          <span>Support@eastbaykpop.com</span>
+          <span>Phone</span>
+          <span>213-222-2222</span>
+          <span>Office</span>
+          <span>2633 Telegraph Ave, Oakland CA, 90000</span>
+        </div>
+      </div>
+  </section>
+</div>
+</DefaultLayoutHero>

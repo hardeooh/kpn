@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="hero my-24">
+  <!-- <img class="hidden lg:block object-cover" src={src} alt="" decoding="async" /> -->
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-5xl md:text-left lg:text-7xl">
+          <slot><span class="text-gradient">Discover</span><br> K-Pop Music</slot>
+        </h1>
+        <p>K-Pop Nation has arrived to the Easy Bay. Bringing you the latest albums, photocards, and lightsticks. We carry everything you will need, whether its for your collection, the next concert, or gift for a friend.</p>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+            <Icon name="ion:star-outline" />
+            Star on GitHub
+          </a>
+          <a
+            class="button has-icon color-secondary"
+            href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
+          >
+            <Icon name="ion:bookmark-outline" />
+            Read the Docs
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
